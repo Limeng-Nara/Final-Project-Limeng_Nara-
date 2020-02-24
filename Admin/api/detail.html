@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+            rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+    </head>
+    <style>
+    .img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+
+    <body>
+        <div class="jumbotronContainer">
+
+        </div>
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script>
+            $(function () {
+                let url = window.location.href
+                let id = url.split('?')
+                console.log();
+                let ID = id[1].substr(3, id[1].length - 3)
+                getAnArticle(ID)
+            })
+
+            function getAnArticle(id) {
+                $.ajax({
+                    url: `http://110.74.194.124:15011/v1/api/articles/${id}`,
+                    method: `GET`,
+                    success: function (response) {
+                        showInJumbotron(response.DATA)
+                    },
+
+                    error: function (error) {
+
+                    }
+                })
+
+            }
+
+            function showInJumbotron(article) {
+                $('.jumbotronContainer').html(`
+                <!-- Jumbotron -->
+                    <div class="jumbotron text-center">
+
+                    <!-- Title -->
+                    <h4 class="card-title h4 pb-2"><strong>${article.TITLE}</strong></h4>
+
+                    <!-- Card image -->
+                    <div class="view overlay my-4">
+                        <img src="${article.IMAGE}" class="img-fluid img" alt="">
+                        <a href="#">
+                        <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <h5 class="indigo-text h5 mb-4">${article.DESCRIPTION}</h5>
+
+                    </div>
+                <!-- Jumbotron -->
+            
+            `)
+            }
+        </script>
+
+    </body>
+
+</html>

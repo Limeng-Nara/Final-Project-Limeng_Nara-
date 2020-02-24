@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>AMS</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+            rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+        <script src="js.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <link href="https://fonts.googleapis.com/css?family=Dangrek&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        #header {
+            text-align: center;
+            background-color: crimson;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        h1 {
+            font-size: 35px;
+            color: whitesmoke;
+            text-decoration: italic;
+            font-style: italic;
+        }
+
+        .khmer {
+            font-family: 'Dangrek', cursive !important;
+        }
+
+        .img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+
+
+
+    <body>
+        <div id="header">
+            <h1>AMS</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" id="callModal" class="btn btn-primary mt-2 khmer" data-toggle="modal"
+                        data-target="#basicExampleModal"> បញ្ចូលអត្ថបទ
+                    </button>
+                </div>
+                <div class="col-6">
+                    <!-- Search form -->
+                    <div class="active-cyan-3 active-cyan-4 mb-4 mt-2">
+                        <input class="form-control" type="text" placeholder="ស្វែងរក" aria-label="Search" id="search">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalArticle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title​​" id="modalTitle"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                   <div class="modal-body">
+
+                        <div class="text-center border border-light p-5">
+
+                            <p class="h4 mb-4 khmer"><i class="fas fa-feather-alt"></i> បញ្ចូលអត្ថបទ</p>
+
+                            <input type="hidden" id="id">
+
+                            <input type="text" id="title" class="form-control mb-4" placeholder="ចំណងជើង">
+
+                            <input type="text" id="description" class="form-control mb-4" placeholder="ការពិពណ៌នា">
+
+                            <input type="text" id="image" class="form-control mb-4" placeholder="តំណភ្ជាប់រូបភាព">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn khmer btn-danger" data-dismiss="modal">បិទចោល</button>
+                        <button type="button" class="btn khmer btn-primary khmer​" ​ id="btnSave">រក្សាទុក</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <table class="table">
+            <thead class="black white-text khmer">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"​>ចំណងជើង</th>
+                    <th scope="col">ការពិពណ៌នា</th>
+                    <th scope="col">រូបភាព</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+
+
+
+
+
+
+
+
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+        </script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js">
+        </script>
+
+    </body>
+
+</html>

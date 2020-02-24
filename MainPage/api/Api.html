@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.0/css/mdb.min.css" rel="stylesheet">
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <button type="button" id="callModal" class="btn btn-primary d-block ml-auto mr-auto mt-4"
+                    data-toggle="modal">
+                    បញ្ចូលអត្ថបទ</button>
+            </div>
+            <div class="col-6">
+                <div class="active-pink-3 active-pink-4 mb-4 mt-4">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="search">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <!-- MODALS -->
+    <div class="modal fade" id="modalArticle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Record</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Default form login -->
+                    <div class="text-center border border-light p-5">
+                        <p class="h4 mb-4">បញ្ចូលអត្ថបទ</p>
+                        <input type="text" id="title" class="form-control mb-4" placeholder="TITLE">
+                        <!-- Password -->
+                        <input type="text" id="desc" class="form-control mb-4" placeholder="DESCRIPTION">
+                        <input type="text" id="image" class="form-control mb-4" placeholder="IMAGE URL">
+                    </div>
+                    <!-- Default form login -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="save">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae voluptate corporis iure fugiat omnis tempore necessitatibus reiciendis sapiente excepturi animi sunt, facere nobis molestias asperiores in itaque minima laboriosam fuga!</div>
+    <!-- END MODAL -->
+    <img src="" alt="">
+    <i class="fas fa-car-battery    ">this year l'll the final year of my graduate year so please take some flover for my graduate's day please</i>
+    <h1>I hope you won't forgat my special day na </h1>
+    <h3>please fell comfotable to my code this is my first code on web-development naaaa......</h3>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.0/js/mdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js.js"></script>
+</body>
+
+</html>
